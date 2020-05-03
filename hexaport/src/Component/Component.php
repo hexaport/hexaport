@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Hexaport;
+namespace Hexaport\Component;
 
 /**
  * Class Component
  *
- * @package Hexaport
+ * @package Hexaport\Component
  */
 abstract class Component implements ComponentInterface
 {
@@ -25,5 +25,15 @@ abstract class Component implements ComponentInterface
         }
 
         $this->basePath = $basePath;
+    }
+
+    /**
+     * Register component.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
     }
 }

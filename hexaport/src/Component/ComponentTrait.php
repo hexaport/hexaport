@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Hexaport;
+namespace Hexaport\Component;
 
 use Composer\Composer;
 use Composer\Factory;
@@ -10,9 +10,9 @@ use Composer\Package\RootPackageInterface;
 use ReflectionClass;
 
 /**
- * Class Component
+ * Trait ComponentTrait
  *
- * @package Hexaport
+ * @package Hexaport\Component
  */
 trait ComponentTrait
 {

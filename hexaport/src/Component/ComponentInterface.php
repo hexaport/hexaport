@@ -1,18 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Hexaport;
+namespace Hexaport\Component;
 
-use Composer\Composer;
-use Composer\Factory;
-use Composer\IO\NullIO;
 use Composer\Package\RootPackageInterface;
-use ReflectionClass;
 
 /**
  * Interface ComponentInterface
  *
- * @package Hexaport
+ * @package Hexaport\Component
  */
 interface ComponentInterface
 {

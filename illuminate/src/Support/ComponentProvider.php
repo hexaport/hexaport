@@ -1,19 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Hexaport\Laravel;
+namespace Hexaport\Illuminate\Support;
 
-use Hexaport\ComponentInterface;
-use Hexaport\ComponentTrait;
+use Hexaport\Component\ComponentTrait;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class ComponentProvider
  *
- * @package Hexaport\Laravel
+ * @package Hexaport\Illuminate\Support
  */
-abstract class ComponentProvider extends ServiceProvider implements ComponentInterface
+abstract class ComponentProvider extends ServiceProvider implements \Hexaport\Component\ComponentInterface
 {
     use ComponentTrait;
 

@@ -1,7 +1,7 @@
 {
-    "name": "hexaport/metapackage",
-    "type": "metapackage",
-    "description": "Hexaport (Metapackage)",
+    "name": "hexaport/support",
+    "type": "library",
+    "description": "Hexaport: Support Package",
     "license": "MIT",
     "support": {
         "issues": "https://github.com/hexaport/hexaport/issues",
@@ -15,17 +15,28 @@
         }
     ],
     "require": {
-        "hexaport/composer": "self.version",
-        "hexaport/hexaport": "self.version",
-        "hexaport/illuminate": "self.version",
-        "hexaport/support": "self.version"
+        "php": "^7.4.0",
+        "psr/container": "^1.0"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "*/"
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hexaport\\Support\\": "src/"
         }
-    ],
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hexaport\\Support\\Tests\\": "tests/"
+        }
+    },
+    "repositories": {
+        "hexaport/metapackage": {
+            "type": "path",
+            "url": "../{,*/}"
+        }
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"

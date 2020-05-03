@@ -1,0 +1,57 @@
+{
+    "name": "hexaport/illuminate",
+    "description": "Hexaport: Laravel Package",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/hexaport/hexaport/issues",
+        "source": "https://github.com/hexaport/hexaport"
+    },
+    "authors": [
+        {
+            "name": "Necati Yared Ozal",
+            "email": "hi@ozal.me",
+            "homepage": "https://ozal.me"
+        }
+    ],
+    "require": {
+        "php": "^7.4.0",
+        "hexaport/hexaport": "^1.0@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hexaport\\Illuminate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hexaport\\Illuminate\\Tests\\": "tests/"
+        }
+    },
+    "repositories": {
+        "hexaport/metapackage": {
+            "type": "path",
+            "url": "../{,*/}"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "dont-discover": [
+                "barryvdh/laravel-ide-helper"
+            ],
+            "providers": [
+                "Covideo\\Components\\Development\\DevelopmentServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

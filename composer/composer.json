@@ -1,7 +1,7 @@
 {
-    "name": "hexaport/metapackage",
-    "type": "metapackage",
-    "description": "Hexaport (Metapackage)",
+    "name": "hexaport/composer",
+    "type": "composer-plugin",
+    "description": "Hexaport: Composer Plugin",
     "license": "MIT",
     "support": {
         "issues": "https://github.com/hexaport/hexaport/issues",
@@ -15,21 +15,23 @@
         }
     ],
     "require": {
-        "hexaport/composer": "self.version",
-        "hexaport/hexaport": "self.version",
-        "hexaport/illuminate": "self.version",
-        "hexaport/support": "self.version"
+        "php": "^7.4.0",
+        "composer-plugin-api": "^2.0"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "*/"
+    "require-dev": {
+        "composer/composer": "^2.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hexaport\\Composer\\": "src/"
         }
-    ],
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"
-        }
+        },
+        "class": "Hexaport\\Composer\\Plugin"
     },
     "config": {
         "sort-packages": true
